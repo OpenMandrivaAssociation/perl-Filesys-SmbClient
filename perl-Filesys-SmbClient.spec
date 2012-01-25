@@ -1,6 +1,6 @@
 %define module   Filesys-SmbClient
 %define version    3.1
-%define release    %mkrel 2
+%define release    %mkrel 3
 
 Name:       perl-%{module}
 Version:    %{version}
