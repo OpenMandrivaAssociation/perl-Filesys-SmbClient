@@ -1,20 +1,17 @@
 %define module   Filesys-SmbClient
-%define version    3.1
-%define release    %mkrel 3
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
-Summary:    Provide Perl API for libsmbclient.so
-Source:     http://www.cpan.org/modules/by-module/Filesys/%{module}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{module}
-BuildRequires: perl-devel
-BuildRequires: perl(Test::More)
-BuildRequires: libsmbclient-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+Name:		perl-%{module}
+Version:	3.1
+Release:	4
+License:	GPL or Artistic
+Group:		Development/Perl
+Summary:	Provide Perl API for libsmbclient.so
+Source:		http://www.cpan.org/modules/by-module/Filesys/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{module}
 
+BuildRequires:	perl-devel
+BuildRequires:	perl(Test::More)
+BuildRequires:	pkgconfig(smbclient)
 
 %description
 Provide interface to access routine defined in libsmbclient.so provided
@@ -34,7 +31,7 @@ Samba to build this libraries. Then copy source/include/libsmbclient.h to
 rm -f t/02tie.t
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor <<EOF
+perl Makefile.PL INSTALLDIRS=vendor <<EOF
 %{_includedir}
 %{_libdir}
 no
@@ -45,16 +42,28 @@ EOF
 make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{_mandir}/man3/*
-%perl_vendorarch/Filesys
-%perl_vendorarch/auto/Filesys
+%{perl_vendorarch}/Filesys
+%{perl_vendorarch}/auto/Filesys
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 3.1-3mdv2012.0
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Mon Sep 14 2009 Thierry Vignaud <tv@mandriva.org> 3.1-2mdv2010.0
++ Revision: 440567
+- rebuild
+
+* Thu Feb 26 2009 Guillaume Rousse <guillomovitch@mandriva.org> 3.1-1mdv2009.1
++ Revision: 345099
+- import perl-Filesys-SmbClient
+
+
+* Thu Feb 26 2009 cpan2dist 3.1-1mdv
+- initial mdv release, generated with cpan2dist
 
