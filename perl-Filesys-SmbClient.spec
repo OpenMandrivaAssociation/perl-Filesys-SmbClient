@@ -1,12 +1,12 @@
 %define module   Filesys-SmbClient
 
 Name:		perl-%{module}
-Version:	3.1
-Release:	4
+Version:	%perl_convert_version 3.2
+Release:	1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Provide Perl API for libsmbclient.so
-Source:		http://www.cpan.org/modules/by-module/Filesys/%{module}-%{version}.tar.gz
+Source:		http://www.cpan.org/modules/by-module/Filesys/Filesys-SmbClient-3.2.tar.gz
 Url:		http://search.cpan.org/dist/%{module}
 
 BuildRequires:	perl-devel
@@ -66,4 +66,5 @@ make test
 
 * Thu Feb 26 2009 cpan2dist 3.1-1mdv
 - initial mdv release, generated with cpan2dist
+
 
