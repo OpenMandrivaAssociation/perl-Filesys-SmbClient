@@ -1,2 +1,4 @@
+removed_sources:
+  Filesys-SmbClient-3.1.tar.gz: fc5f2bf355187748dba1f002d22d6d1774083155
 sources:
-  "Filesys-SmbClient-3.1.tar.gz": fc5f2bf355187748dba1f002d22d6d1774083155
+  Filesys-SmbClient-3.2.tar.gz: 20a0b91d5efc092b13aa1ed93d2ad278d2f074a4
