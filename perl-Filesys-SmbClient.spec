@@ -1,5 +1,5 @@
 %define module   Filesys-SmbClient
-
+%define upstream_version 3.2
 Name:		perl-%{module}
 Version:	%perl_convert_version 3.2
 Release:	1
@@ -27,7 +27,7 @@ Samba to build this libraries. Then copy source/include/libsmbclient.h to
 /usr/local/samba/lib before install this module.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{module}-%{upstream_version} 
 rm -f t/02tie.t
 
 %build
@@ -66,5 +66,6 @@ make test
 
 * Thu Feb 26 2009 cpan2dist 3.1-1mdv
 - initial mdv release, generated with cpan2dist
+
 
 
