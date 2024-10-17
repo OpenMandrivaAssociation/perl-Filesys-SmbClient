@@ -8,7 +8,7 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Provide Perl API for libsmbclient.so
 Source:		http://www.cpan.org/modules/by-module/Filesys/Filesys-SmbClient-3.2.tar.gz
-Url:		http://search.cpan.org/dist/%{module}
+Url:		https://search.cpan.org/dist/%{module}
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::More)
