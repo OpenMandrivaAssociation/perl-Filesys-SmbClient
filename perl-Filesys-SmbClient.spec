@@ -10,6 +10,7 @@ Summary:	Provide Perl API for libsmbclient.so
 Source:		http://www.cpan.org/modules/by-module/Filesys/Filesys-SmbClient-3.2.tar.gz
 Url:		https://search.cpan.org/dist/%{module}
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::More)
 BuildRequires:	pkgconfig(smbclient)
