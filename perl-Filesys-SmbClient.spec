@@ -2,13 +2,13 @@
 %define upstream_version 3.2
 
 Name:		perl-%{module}
-Version:	%perl_convert_version 3.2
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Provide Perl API for libsmbclient.so
-Source:		http://www.cpan.org/modules/by-module/Filesys/Filesys-SmbClient-3.2.tar.gz
-Url:		https://search.cpan.org/dist/%{module}
+Source:		https://cpan.metacpan.org/authors/id/A/AL/ALIAN/Filesys-SmbClient-3.2.tar.gz
+Url:		https://metacpan.org/dist/Filesys-SmbClient
 
 BuildRequires:	make
 BuildRequires:	perl-devel
