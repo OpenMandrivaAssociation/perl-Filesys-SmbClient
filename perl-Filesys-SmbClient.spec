@@ -1,9 +1,7 @@
 %define module   Filesys-SmbClient
-%define upstream_version 3.2
-
 Name:		perl-%{module}
-Version:	%{upstream_version}
-Release:	4
+Version:	3.2
+Release:	5
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Provide Perl API for libsmbclient.so
@@ -29,7 +27,7 @@ Samba to build this libraries. Then copy source/include/libsmbclient.h to
 /usr/local/samba/lib before install this module.
 
 %prep
-%setup -q -n %{module}-%{upstream_version} 
+%setup -q -n %{module}-%{version} 
 rm -f t/02tie.t
 
 %build
